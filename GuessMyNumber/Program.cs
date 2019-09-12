@@ -20,11 +20,13 @@ namespace GuessMyNumber
                 Random rnd = new Random();
                 int secretNumber = rnd.Next(1, maxhNumber + 1);
                 int userGuess = 0;
+                int numberOfGuesses = 0;
 
                 while (userGuess != secretNumber)
                 {
                     Console.Write("What is your first guess?  ");
                     userGuess = Convert.ToInt32(Console.ReadLine());
+                    numberOfGuesses++;
 
                     if (userGuess < secretNumber)
                     {
@@ -37,9 +39,9 @@ namespace GuessMyNumber
                     else
                     {
                         Console.WriteLine("Great guess, you win!");
+                        Console.WriteLine($"It took you {numberOfGuesses} guesses!");
                     }
                 }
-
             }
         }
     }
