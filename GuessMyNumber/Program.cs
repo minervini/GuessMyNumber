@@ -17,15 +17,15 @@ namespace GuessMyNumber
             {
                 Console.WriteLine("What is the range of numbers would like to guess from?  ");
                 int maxhNumber = Convert.ToInt32(Console.ReadLine());
-
                 Random rnd = new Random();
                 int secretNumber = rnd.Next(1, maxhNumber + 1);
-
-                Console.Write("What is your first guess?  ");
-                int userGuess = Convert.ToInt32(Console.ReadLine());
+                int userGuess = 0;
 
                 while (userGuess != secretNumber)
                 {
+                    Console.Write("What is your first guess?  ");
+                    userGuess = Convert.ToInt32(Console.ReadLine());
+
                     if (userGuess < secretNumber)
                     {
                         Console.WriteLine("Too low, try again.");
