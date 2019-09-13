@@ -39,7 +39,7 @@ namespace GuessMyNumber
                     else
                     {
                         Console.WriteLine("Great guess, you win!");
-                        Console.WriteLine($"It took you {numberOfGuesses} guesses!");
+                        Console.WriteLine($"It took you {numberOfGuesses} guesses!"); //cool
                     }
                 }
             }
